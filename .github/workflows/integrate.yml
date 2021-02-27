@@ -8,14 +8,10 @@ jobs:
   test_pull_request:
     runs_on: ubuntu-latest
     steps:
-      - name: Checkout Repo
       - uses: actions/checkout@master
       - uses: actions/setup-node@master
         with:
           node-version: "14.x"
-      - name: Install Dependencies
       - run: npm ci
-      - name: Run Tests
       - run: npm test
-      - name: Build
       - run: npm run build
