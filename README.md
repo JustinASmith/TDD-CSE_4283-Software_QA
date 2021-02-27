@@ -1,7 +1,7 @@
 # TDD - Software Testing QA - CSE 4283 Spring 2021
 
-![Node CI](https://github.com/JustinASmith/TDD-CSE_4283-Software_QA/blob/main/.github/workflows/integrate.yml/badge.svg?branch=main)
-![Firebase CD](https://github.com/JustinASmith/TDD-CSE_4283-Software_QA/blob/main/.github/workflows/deploy.yml/badge.svg?branch=main)
+![Node CI](https://github.com/JustinASmith/TDD-CSE_4283-Software_QA/actions/workflows/integrate.yml/badge.svg)
+![Firebase CD](https://github.com/JustinASmith/TDD-CSE_4283-Software_QA/actions/workflows/deploy.yml/badge.svg?branch=main)
 
 ## Objective
 
