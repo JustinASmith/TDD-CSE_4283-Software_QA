@@ -2,6 +2,7 @@
 
 ![Node CI](https://github.com/JustinASmith/TDD-CSE_4283-Software_QA/actions/workflows/integrate.yml/badge.svg)
 ![Firebase CD](https://github.com/JustinASmith/TDD-CSE_4283-Software_QA/actions/workflows/deploy.yml/badge.svg?branch=main)
+[![time tracker](https://wakatime.com/badge/github/JustinASmith/TDD-CSE_4283-Software_QA.svg)](https://wakatime.com/badge/github/JustinASmith/TDD-CSE_4283-Software_QA)
 
 ## Objective
 
