@@ -1,0 +1,27 @@
+{
+  "name": "tdd-cse_4283-software_qa",
+  "version": "1.0.0",
+  "description": "Simple web app that uses TDD to implement two core requirements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustinASmith/TDD-CSE_4283-Software_QA.git"
+  },
+  "keywords": [
+    "TDD",
+    "CI/CD",
+    "GitHub",
+    "Actions",
+    "Unit",
+    "Testing"
+  ],
+  "author": "Justin Allen Smith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JustinASmith/TDD-CSE_4283-Software_QA/issues"
+  },
+  "homepage": "https://github.com/JustinASmith/TDD-CSE_4283-Software_QA#readme"
+}
