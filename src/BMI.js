@@ -18,19 +18,19 @@ class BMI {
     }
 
     setFeet(feet) {
-        if (typeof feet != 'number') feet = this.round(feet, 1);
+        if (typeof feet != 'number') feet = this.round(feet, 0);
         if (feet >= 0 && feet <= 11) this.feet = feet;
         else this.feet = NaN;
     }
 
     setInches(inches) {
-        if (typeof inches != 'number') inches = this.round(inches, 1);
+        if (typeof inches != 'number') inches = this.round(inches, 0);
         if (inches >= 0 && inches <= 132) this.inches = inches;
         else this.inches = NaN;
     }
 
     setPounds(pounds) {
-        if (typeof pounds != 'number') pounds = this.round(pounds, 1);
+        if (typeof pounds != 'number') pounds = this.round(pounds, 0);
         if (pounds > 0 && pounds <= 1000) this.pounds = pounds;
         else this.pounds = NaN;
     }
