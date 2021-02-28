@@ -1,1 +1,1 @@
-(()=>{"use strict";try{document.getElementById("random").innerText=(100,Math.floor(Math.random()*Math.floor(100)))}catch(t){console.error(t)}})();
+(()=>{var e={490:(e,t)=>{t.BMI=class{constructor(e,t,s){this.feet=e,this.inches=t,this.pounds=s}getBMI(){return{value:this.getBMIValue(),category:this.getBMICategory()}}getBMIValue(){}getBMICategory(){}feetToInches(e){}inchesToMeters(e){}poundsToKilograms(e){}}}},t={};function s(r){if(t[r])return t[r].exports;var o=t[r]={exports:{}};return e[r](o,o.exports,s),o.exports}(()=>{const{BMI:e}=s(490)})()})();
