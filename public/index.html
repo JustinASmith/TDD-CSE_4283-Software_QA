@@ -6,23 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>TDD - CSE 4283 - Spring 2021</title>
 
-  <script defer src="/__/firebase/8.2.9/firebase-app.js"></script>
-  <script defer src="/__/firebase/8.2.9/firebase-analytics.js"></script>
+  <!-- <script defer src="/__/firebase/8.2.9/firebase-app.js"></script>
+  <script defer src="/__/firebase/8.2.9/firebase-analytics.js"></script> -->
   <!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
-  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  <!-- <script defer src="/__/firebase/init.js?useEmulator=true"></script> -->
   <script defer src="bundle.js"></script>
 </head>
 
 <body>
-  <p id="random"></p>
-  <p id="load">Firebase SDK Loading&hellip;</p>
+  
+  <form onsubmit="handleSubmit(event)">
+    <input type="text" name="feet" id="feet" onchange="handleFeet()"/>
+    <input type="text" name="inches" id="inches" onchange="handleInches()"/>
+    <input type="text" name="pounds" id="pounds" onchange="handlePounds()"/>
+    <button type="submit">Calculate BMI</button>
+  </form>
 
-  <script>
+  <!-- <script>
     document.addEventListener('DOMContentLoaded', function () {
-      const loadEl = document.querySelector('#load');
       // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
       // // The Firebase SDK is initialized and available here!
       //
@@ -51,7 +55,6 @@
           'remoteConfig',
           'performance',
         ].filter(feature => typeof app[feature] === 'function');
-        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
 
         var firebaseConfig = {
           apiKey: "AIzaSyCq-CSpNh116mEbXJh0OBED0KkELPK--AU",
@@ -70,9 +73,8 @@
         }
       } catch (e) {
         console.error(e);
-        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
       }
-    });
+    }); -->
   </script>
 </body>
 
