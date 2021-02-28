@@ -1,9 +1,30 @@
-const getRandomInt = (max) => {
-  return Math.floor(Math.random() * Math.floor(max));
-}
+const { BMI } = require("./BMI");
+
+const bmi = new BMI();
 
 try {
-  document.getElementById('random').innerText = getRandomInt(100);
-} catch (err) {}
+  function handleFeet() {
+    const feet = document.getElementById('feet');
+    bmi.setFeet(feet.value);
+  }
 
-exports.getRandomInt = getRandomInt;
+  function handleInches() {
+    const inches = document.getElementById('inches');
+    bmi.setInches(inches.value);
+  }
+
+  function handlePounds() {
+    const pounds = document.getElementById('pounds');
+    bmi.setPounds(pounds.value);
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(bmi.getBMI());
+  }
+
+  window.handleFeet = handleFeet;
+  window.handleInches = handleInches;
+  window.handlePounds = handlePounds;
+  window.handleSubmit = handleSubmit;
+} catch(err) {}
