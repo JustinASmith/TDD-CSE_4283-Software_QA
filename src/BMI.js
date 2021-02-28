@@ -19,7 +19,7 @@ class BMI {
 
     setFeet(feet) {
         if (typeof feet != 'number') feet = this.round(feet, 1);
-        if (feet >= 0 && feet <= 10) this.feet = feet;
+        if (feet >= 0 && feet <= 11) this.feet = feet;
         else this.feet = NaN;
     }
 
@@ -36,13 +36,16 @@ class BMI {
     }
 
     getValue() {
-        if (isNaN(this.feet) || isNaN(this.inches) || isNaN(this.pounds)) {
+        if (isNaN(this.feet) || isNaN(this.inches) || isNaN(this.pounds) || (this.feet == 0 && this.inches == 0)) {
             return undefined;
         }
         // 1. convert lbs to kg
         const kg = this.poundsToKilograms(this.pounds);
         // 2. convert feet to inches and add inches
         const newInches = this.feetToInches(this.feet) + this.inches;
+        if (!(newInches > 0 && newInches <= 132)) {
+            return undefined;
+        }
         // 3. convert inches to meters
         const meters = this.inchesToMeters(newInches);
         // 4. divide kg by squared meters
