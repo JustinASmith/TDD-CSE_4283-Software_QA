@@ -7,47 +7,37 @@ describe('Body Mass Index (BMI) class', () => {
         bmi = new BMI();
     });
 
-    // Spec: [0, 10]
     describe('Feet to Inches', () => {
         test('2 feet is 24 inches', () => {
-            bmi.setFeet(2);
-            expect(bmi.feetToInches()).toBe(24);
+            expect(bmi.feetToInches(2)).toBe(24);
         });
     
         test('0 feet to be 0 inches', () => {
-            bmi.setFeet(0);
-            expect(bmi.feetToInches()).toBe(0);
+            expect(bmi.feetToInches(0)).toBe(0);
         });
 
         test('-1 feet to be 0 inches', () => {
-            bmi.setFeet(-1);
-            expect(bmi.feetToInches()).toBe(0);
+            expect(bmi.feetToInches(-1)).toBe(-12);
         });
     });
 
-    // Spec: (0, 132]
     describe('Inches to Meters', () => {
         test('132 inches is 3.3 meters', () => {
-            bmi.setInches(132);
-            expect(bmi.inchesToMeters()).toBe(3.3);
+            expect(bmi.inchesToMeters(132)).toBe(3.3);
         });
 
         test('0 inches is 0 meters', () => {
-            bmi.setInches(0);
-            expect(bmi.inchesToMeters()).toBe(0);
+            expect(bmi.inchesToMeters(0)).toBe(0);
         });
     });
 
-    // Spec: (0, 1000]
    describe('Pounds to Kilograms', () => {
         test('1000 pounds is 450 kilograms', () => {
-            bmi.setPounds(1000);
-            expect(bmi.poundsToKilograms()).toBe(450);
+            expect(bmi.poundsToKilograms(1000)).toBe(450);
         });
 
         test('0 pounds is 0 kilograms', () => {
-            bmi.setPounds(0);
-            expect(bmi.poundsToKilograms()).toBe(0);
+            expect(bmi.poundsToKilograms(0)).toBe(0);
         });
     });
 
@@ -96,39 +86,39 @@ describe('Body Mass Index (BMI) class', () => {
             expect(result.category).toBe(undefined);
         });
 
-        test('a 5 foot, 3 inch, 104 pound person has a bmi of 18.4 which is underweight', () => {
+        test('a 5 foot, 3 inch, 102 pound person has a bmi of 18.5 which is underweight', () => {
             bmi.setFeet(5);
             bmi.setInches(3);
-            bmi.setPounds(104);
+            bmi.setPounds(102);
             const result = bmi.getBMI();
-            expect(result.bmi).toBe(18.4);
+            expect(result.bmi).toBe(18.5);
             expect(result.category).toBe('Underweight');
         });
 
-        test('a 6 foot, 3 inch, 190 pound person has a bmi of 23.7 which is normal', () => {
+        test('a 6 foot, 3 inch, 190 pound person has a bmi of 24.3 which is normal', () => {
             bmi.setFeet(6);
             bmi.setInches(3);
             bmi.setPounds(190);
             const result = bmi.getBMI();
-            expect(result.bmi).toBe(23.7);
+            expect(result.bmi).toBe(24.3);
             expect(result.category).toBe('Normal');
         });
 
-        test('a 5 foot, 8 inch, 165 pound person has a bmi of 25.1 which is overweight', () => {
+        test('a 5 foot, 8 inch, 165 pound person has a bmi of 25.7 which is overweight', () => {
             bmi.setFeet(5);
             bmi.setInches(8);
             bmi.setPounds(165);
             const result = bmi.getBMI();
-            expect(result.bmi).toBe(25.1);
+            expect(result.bmi).toBe(25.7);
             expect(result.category).toBe('Overweight');
         });
 
-        test('a 5 foot, 0 inch, 180 pound person has a bmi of 35.1 which is obese', () => {
+        test('a 5 foot, 0 inch, 180 pound person has a bmi of 36 which is obese', () => {
             bmi.setFeet(5);
             bmi.setInches(0);
             bmi.setPounds(180);
             const result = bmi.getBMI();
-            expect(result.bmi).toBe(35.1);
+            expect(result.bmi).toBe(36);
             expect(result.category).toBe('Obese');
         });
     });
