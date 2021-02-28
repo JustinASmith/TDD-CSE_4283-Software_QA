@@ -54,15 +54,15 @@ describe('Body Mass Index (BMI) class', () => {
 
         Boundary Points (test cases):
         Off points
-            - No weight, has height
-            - No height, has weight
-            - Over max height, has valid weight
-            - Over max weight, has valid height
-            On points
-            - Min weight, valid height
-            - Min height, valid weight
-            - Max weight, valid height
-            - Max height, valid weight
+        - No weight, has height
+        - No height, has weight
+        - Over max height, has valid weight
+        - Over max weight, has valid height
+        On points
+        - Min weight, valid height
+        - Min height, valid weight
+        - Max weight, valid height
+        - Max height, valid weight
     */
     describe('Get BMI Value and Category', () => {
         // 'OFF' point
