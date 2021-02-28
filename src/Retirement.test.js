@@ -123,7 +123,7 @@ describe('Retirement Class', () => {
     describe('18 Year Old with Savings Goal of 1,000,000', () => {
         beforeEach(() => {
             retirement.setAge(18);
-            retirement.setSavingGoal(10000000);
+            retirement.setSavingGoal(1000000);
         })
         // 'OFF' point
         // Valid saving, less than min salary
@@ -133,6 +133,7 @@ describe('Retirement Class', () => {
             expect(retirement.getSavingPerYear()).toBe(undefined);
             expect(retirement.getYearsTilGoal()).toBe(undefined);
             expect(retirement.getAgeGoalMet()).toBe(undefined);
+            expect(retirement.isGoalMet()).toBe(false);
         });
 
         // 'OFF' point
@@ -143,6 +144,7 @@ describe('Retirement Class', () => {
             expect(retirement.getSavingPerYear()).toBe(undefined);
             expect(retirement.getYearsTilGoal()).toBe(undefined);
             expect(retirement.getAgeGoalMet()).toBe(undefined);
+            expect(retirement.isGoalMet()).toBe(false);
         });
         
         // 'OFF' point
@@ -153,6 +155,7 @@ describe('Retirement Class', () => {
             expect(retirement.getSavingPerYear()).toBe(undefined);
             expect(retirement.getYearsTilGoal()).toBe(undefined);
             expect(retirement.getAgeGoalMet()).toBe(undefined);
+            expect(retirement.isGoalMet()).toBe(false);
         });
 
         // 'OFF' point
@@ -163,46 +166,51 @@ describe('Retirement Class', () => {
             expect(retirement.getSavingPerYear()).toBe(undefined);
             expect(retirement.getYearsTilGoal()).toBe(undefined);
             expect(retirement.getAgeGoalMet()).toBe(undefined);
+            expect(retirement.isGoalMet()).toBe(false);
         });
 
         // 'ON' point
         // Min saving, valid salary
-        test('0% saving, 80,000 salary has a $0 saving per year, undefined years til and age when goal is met', () => {
+        test('0% saving, 80,000 salary has a 0 saving per year, undefined years til and age when goal is met', () => {
             retirement.setPercentSaved(0.0);
             retirement.setSalary(80000);
             expect(retirement.getSavingPerYear()).toBe(0);
-            expect(retirement.getYearsTilGoal()).toBe(0);
-            expect(retirement.getAgeGoalMet()).toBe(18);
+            expect(retirement.getYearsTilGoal()).toBe(undefined);
+            expect(retirement.getAgeGoalMet()).toBe(undefined);
+            expect(retirement.isGoalMet()).toBe(false);
         });
 
         // 'ON' point
         // Min salary, valid saving
-        test('15% saving, 0 salary has a $0 saving per year, undefined years til and age when goal is met', () => {
+        test('15% saving, 0 salary has a 0 saving per year, undefined years til and age when goal is met', () => {
             retirement.setPercentSaved(0.15);
             retirement.setSalary(0);
             expect(retirement.getSavingPerYear()).toBe(0);
-            expect(retirement.getYearsTilGoal()).toBe(0);
-            expect(retirement.getAgeGoalMet()).toBe(18);
+            expect(retirement.getYearsTilGoal()).toBe(undefined);
+            expect(retirement.getAgeGoalMet()).toBe(undefined);
+            expect(retirement.isGoalMet()).toBe(false);
         });
 
         // 'ON' point
         // Max saving, valid salary
-        test('100% saving, 25,000 salary has a $0 saving per year, undefined years til and age when goal is met', () => {
+        test('100% saving, 25,000 salary has a 33,750 saving per year, 30 years til met and age of 48 when goal is met', () => {
             retirement.setPercentSaved(1.0);
             retirement.setSalary(25000);
-            expect(retirement.getSavingPerYear()).toBe(0);
-            expect(retirement.getYearsTilGoal()).toBe(0);
-            expect(retirement.getAgeGoalMet()).toBe(18);
+            expect(retirement.getSavingPerYear()).toBe(33750);
+            expect(retirement.getYearsTilGoal()).toBe(30);
+            expect(retirement.getAgeGoalMet()).toBe(48);
+            expect(retirement.isGoalMet()).toBe(true);
         });
 
         // 'ON' point
         // Max salary, valid saving
-        test('10% saving, 500,000 salary has a $0 saving per year, undefined years til and age when goal is met', () => {
+        test('10% saving, 500,000 salary has a 67,500 saving per year, 15 years til goal met and age of 33 when goal is met', () => {
             retirement.setPercentSaved(0.1);
             retirement.setSalary(500000);
-            expect(retirement.getSavingPerYear()).toBe(0);
-            expect(retirement.getYearsTilGoal()).toBe(0);
-            expect(retirement.getAgeGoalMet()).toBe(18);
+            expect(retirement.getSavingPerYear()).toBe(67500);
+            expect(retirement.getYearsTilGoal()).toBe(15);
+            expect(retirement.getAgeGoalMet()).toBe(33);
+            expect(retirement.isGoalMet()).toBe(true);
         });
     });
 });
