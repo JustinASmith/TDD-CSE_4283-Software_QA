@@ -4,12 +4,14 @@ class BMI {
         this.feet = 0;
         this.inches = 0;
         this.pounds = 0;
+        this.bmi = 0;
+        this.category = '';
     }
 
     getBMI() {
         return {
-            bmi: this.getBMIValue(),
-            category: this.getBMICategory()
+            bmi: this.bmi,
+            category: this.category
         };
     }
 
@@ -17,15 +19,7 @@ class BMI {
         return;
     }
 
-    getFeet() {
-        return;
-    }
-
     setInches(inches) {
-        return;
-    }
-
-    getInches() {
         return;
     }
 
@@ -33,15 +27,15 @@ class BMI {
         return;
     }
 
-    getPounds() {
+    getValue() {
         return;
     }
 
-    getBMIValue() {
+    getCategory() {
         return;
     }
 
-    getBMICategory() {
+    setCategory() {
         return;
     }
 
