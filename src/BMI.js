@@ -1,16 +1,40 @@
 class BMI {
     
     constructor(feet, inches, pounds) {
-        this.feet = feet;
-        this.inches = inches;
-        this.pounds = pounds;
+        this.feet = 0;
+        this.inches = 0;
+        this.pounds = 0;
     }
 
     getBMI() {
         return {
-            value: this.getBMIValue(),
+            bmi: this.getBMIValue(),
             category: this.getBMICategory()
         };
+    }
+
+    setFeet(feet) {
+        return;
+    }
+
+    getFeet() {
+        return;
+    }
+
+    setInches(inches) {
+        return;
+    }
+
+    getInches() {
+        return;
+    }
+
+    setPounds(pounds) {
+        return;
+    }
+
+    getPounds() {
+        return;
     }
 
     getBMIValue() {
@@ -21,15 +45,15 @@ class BMI {
         return;
     }
 
-    feetToInches(feet) {
+    feetToInches() {
         return;
     }
 
-    inchesToMeters(inches) {
+    inchesToMeters() {
         return;
     }
 
-    poundsToKilograms(pounds) {
+    poundsToKilograms() {
         return;
     }
 }
