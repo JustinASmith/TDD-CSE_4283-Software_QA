@@ -13,6 +13,12 @@
   </a>
 </p>
 
+<p align="center">
+  <img width="48%" alt="Screen Shot 2021-03-01 at 2 20 40 PM" src="https://user-images.githubusercontent.com/28692620/109554037-5a63b180-7a99-11eb-9dce-acab305ab365.png">
+  <img width="48%" alt="Screen Shot 2021-03-01 at 2 20 50 PM" src="https://user-images.githubusercontent.com/28692620/109554047-5e8fcf00-7a99-11eb-98be-250dd65f7109.png">
+</p>
+
+
 # Objective
 
 Apply test-driven development (TDD) to implement a set of software requirements for Software Testing and Quality Assurance - CSE 4283, Mississippi State University - Spring 2021
