@@ -193,7 +193,7 @@ describe('Retirement Class', () => {
 
         // 'ON' point
         // Max saving, valid salary
-        test('100% saving, 25,000 salary has a 33,750 saving per year, 30 years til met and age of 48 when goal is met', () => {
+        test('100% saving, 25,000 salary has a 33,750 saving per year, 48 years til met and age of 48 when goal is met', () => {
             retirement.setPercentSaved(1.0);
             retirement.setSalary(25000);
             expect(retirement.getSavingPerYear()).toBe(33750);
