@@ -2,7 +2,7 @@ name: Firebase Continuous Deployment
 
 on:
   release:
-    types: [prereleased, published, edited, released]
+    types: [prereleased, edited, released]
 
 jobs:
   deploy:
