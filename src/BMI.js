@@ -1,5 +1,5 @@
 class BMI {
-    
+
     constructor() {
         this.feet = NaN;
         this.inches = NaN;
@@ -10,7 +10,7 @@ class BMI {
 
     getBMI() {
         this.bmi = this.getValue();
-        this.category =this.getCategory();
+        this.category = this.getCategory();
         return {
             bmi: this.bmi,
             category: this.category
@@ -23,16 +23,28 @@ class BMI {
         else this.feet = NaN;
     }
 
+    getFeet() {
+        return this.feet;
+    }
+
     setInches(inches) {
         if (typeof inches != 'number') inches = this.round(inches, 0);
         if (inches >= 0 && inches <= 132) this.inches = inches;
         else this.inches = NaN;
     }
 
+    getInches() {
+        return this.inches;
+    }
+
     setPounds(pounds) {
         if (typeof pounds != 'number') pounds = this.round(pounds, 0);
         if (pounds > 0 && pounds <= 1000) this.pounds = pounds;
         else this.pounds = NaN;
+    }
+
+    getPounds() {
+        return this.pounds;
     }
 
     getValue() {

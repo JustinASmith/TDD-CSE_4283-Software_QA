@@ -4,7 +4,7 @@
   "description": "Simple web app that uses TDD to implement two core requirements.",
   "main": "src/app.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "webpack -w --config webpack.config.js --mode production",
     "start:dev": "concurrently \"npm run build\" \"live-server public\"",
     "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting"

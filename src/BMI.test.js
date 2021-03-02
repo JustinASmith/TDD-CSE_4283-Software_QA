@@ -1,8 +1,10 @@
-const { BMI } = require("./BMI");
+const {
+    BMI
+} = require("./BMI");
 
 describe('Body Mass Index (BMI) class', () => {
     let bmi;
-    
+
     beforeEach(() => {
         bmi = new BMI();
     });
@@ -11,12 +13,12 @@ describe('Body Mass Index (BMI) class', () => {
         test('2 feet is 24 inches', () => {
             expect(bmi.feetToInches(2)).toBe(24);
         });
-    
+
         test('0 feet to be 0 inches', () => {
             expect(bmi.feetToInches(0)).toBe(0);
         });
 
-        test('-1 feet to be 0 inches', () => {
+        test('-1 feet to be -12 inches', () => {
             expect(bmi.feetToInches(-1)).toBe(-12);
         });
     });
@@ -31,13 +33,49 @@ describe('Body Mass Index (BMI) class', () => {
         });
     });
 
-   describe('Pounds to Kilograms', () => {
+    describe('Pounds to Kilograms', () => {
         test('1000 pounds is 450 kilograms', () => {
             expect(bmi.poundsToKilograms(1000)).toBe(450);
         });
 
         test('0 pounds is 0 kilograms', () => {
             expect(bmi.poundsToKilograms(0)).toBe(0);
+        });
+    });
+
+    describe('Set Feet', () => {
+        test('-1 feet is NaN', () => {
+            bmi.setFeet(-1);
+            expect(bmi.getFeet()).toBe(NaN);
+        });
+
+        test('12 feet is NaN', () => {
+            bmi.setFeet(12)
+            expect(bmi.getFeet()).toBe(NaN);
+        });
+    });
+
+    describe('Set Inches', () => {
+        test('-1 inches is NaN', () => {
+            bmi.setInches(-1);
+            expect(bmi.getInches()).toBe(NaN);
+        });
+
+        test('133 inches is NaN', () => {
+            bmi.setInches(133);
+            expect(bmi.getInches()).toBe(NaN);
+        });
+    });
+
+    describe('Set Pounds', () => {
+        test('0 pounds is NaN', () => {
+            bmi.setPounds(0);
+            expect(bmi.getPounds()).toBe(NaN);
+        });
+
+        test('1001 pounds is NaN', () => {
+            bmi.setPounds(1001);
+            expect(bmi.getPounds()).toBe(NaN);
         });
     });
 
@@ -111,7 +149,7 @@ describe('Body Mass Index (BMI) class', () => {
 
         // 'ON' point
         // Min weight, valid height
-        test('a 4 foot, 3 inch, 1 pound person has a bmi of 0 which is underweight', () => {
+        test('a 4 foot, 3 inch, 1 pound person has a bmi of 0.3 which is underweight', () => {
             bmi.setFeet(4);
             bmi.setInches(3);
             bmi.setPounds(1);
@@ -133,7 +171,7 @@ describe('Body Mass Index (BMI) class', () => {
 
         // 'ON' point
         // Max weight, valid height
-        test('a 6 foot, 2 inch, 1000 pound person has a bmi of 131.5 which is overweight', () => {
+        test('a 6 foot, 2 inch, 1000 pound person has a bmi of 131.5 which is obese', () => {
             bmi.setFeet(6);
             bmi.setInches(2);
             bmi.setPounds(1000);
@@ -144,13 +182,24 @@ describe('Body Mass Index (BMI) class', () => {
 
         // 'ON' point
         // Max height, valid weight
-        test('a 11 foot, 0 inch, 650 pound person has a bmi of 26.9 which is obese', () => {
+        test('a 11 foot, 0 inch, 650 pound person has a bmi of 26.9 which is overweight', () => {
             bmi.setFeet(11);
             bmi.setInches(0);
             bmi.setPounds(650);
             const result = bmi.getBMI();
             expect(result.bmi).toBe(26.9);
             expect(result.category).toBe('Overweight');
+        });
+
+        // 'ON' point
+        // To test 'Normal' range BMI
+        test('a 6 foot, 2 inch, 170 pound person has a bmi of 22.4 which is normal', () => {
+            bmi.setFeet(6);
+            bmi.setInches(2);
+            bmi.setPounds(170);
+            const result = bmi.getBMI();
+            expect(result.bmi).toBe(22.4);
+            expect(result.category).toBe('Normal');
         });
     });
 });
