@@ -5,7 +5,8 @@
   "main": "src/app.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack --config webpack.config.js --mode production",
+    "build": "webpack -w --config webpack.config.js --mode production",
+    "start:dev": "concurrently \"npm run build\" \"live-server public\"",
     "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting"
   },
   "repository": {
@@ -32,6 +33,9 @@
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
-    "firebase-tools": "^9.5.0"
+    "concurrently": "^6.0.0",
+    "firebase-tools": "^9.5.0",
+    "install": "^0.13.0",
+    "live-server": "^1.2.1"
   }
 }
