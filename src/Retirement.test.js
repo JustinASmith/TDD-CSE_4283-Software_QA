@@ -1,10 +1,18 @@
-const { Retirement } = require('./Retirement');
+const {
+    Retirement
+} = require('./Retirement');
 
 describe('Retirement Class', () => {
     let retirement;
 
     beforeEach(() => {
         retirement = new Retirement();
+    });
+
+    describe('Rounding Utility Function', () => {
+        test('rounds 3.14159265 to 3.142 when precision is 3', () => {
+            expect(retirement.round(3.14159265, 3)).toBe(3.142);
+        });
     });
 
     describe('Setting Age, Salary, Percent Saved, Savings Goal', () => {
@@ -146,7 +154,7 @@ describe('Retirement Class', () => {
             expect(retirement.getAgeGoalMet()).toBe(undefined);
             expect(retirement.isGoalMet()).toBe(false);
         });
-        
+
         // 'OFF' point
         // Valid saving, greater than max salary
         test('25% saving, 500,001 salary has an undefined saving per year, years til and age when goal is met', () => {
