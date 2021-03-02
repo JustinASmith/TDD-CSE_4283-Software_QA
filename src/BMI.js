@@ -68,11 +68,11 @@ class BMI {
         if (isNaN(this.feet) || isNaN(this.inches) || isNaN(this.pounds) || isNaN(this.bmi)) {
             return undefined;
         }
-        if (this.bmi > 30.0) {
+        if (this.bmi >= 30.0) {
             return 'Obese';
-        } else if (this.bmi > 25.0) {
+        } else if (this.bmi >= 25.0) {
             return 'Overweight';
-        } else if (this.bmi > 18.5) {
+        } else if (this.bmi >= 18.5) {
             return 'Normal';
         } else {
             return 'Underweight';
