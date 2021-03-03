@@ -5,8 +5,9 @@
   "main": "src/app.js",
   "scripts": {
     "test": "jest --coverage",
-    "build": "webpack -w --config webpack.config.js --mode production",
-    "start:dev": "concurrently \"npm run build\" \"live-server public\"",
+    "build": "webpack --config webpack.config.js --mode production",
+    "build:watch": "webpack -w --config webpack.config.js --mode development",
+    "start:dev": "concurrently \"npm run build:watch\" \"live-server public\"",
     "deploy": "firebase deploy --token \"$FIREBASE_TOKEN\" --only hosting"
   },
   "repository": {
