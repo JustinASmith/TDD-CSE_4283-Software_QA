@@ -14,7 +14,8 @@
 
 <body class="bg-gray-800">
 
-  <nav class="flex flex-wrap-reverse justify-between items-center bg-gray-800 px-5 py-4">
+  <nav
+    class="m-auto flex flex-wrap-reverse justify-between items-center bg-gray-800 px-5 py-4 w-11/12 sm:w-8/12 md:w-1/2 lg:w-5/12">
     <div class="flex my-2 flex-wrap text-gray-200 transition duration-500 ease-in-out" id="bmi-calc">
       <a onclick="menuOption(this); return false;" id="bmi-menu" class="mr-4 hover:text-gray-100 cursor-pointer">Body
         Mass Index</a>
@@ -70,9 +71,8 @@
   </div>
   <!-- End Retirement Results Modal -->
 
-  <div class="grid mt-6 place-items-center bg-gray-800">
-    <div id="bmi-form"
-      class="transition duration-500 ease-in-out w-11/12 p-12 sm:w-8/12 md:w-1/2 lg:w-5/12 bg-gray-700 rounded-3xl shadow-2xl">
+  <div class="grid place-items-center bg-gray-800 m-6">
+    <div id="bmi-form" class="transition duration-500 ease-in-out p-12 bg-gray-700 rounded-3xl shadow-2xl">
       <h1 class="text-4xl font-bold text-gray-100 text-center mb-3">Body Mass Index</h1>
       <h2 class="text-md font-normal text-gray-200 text-center">Please fill in your information to calculate your BMI
       </h2>
@@ -98,7 +98,7 @@
               class="mt-1 text-xs text-gray-400">Weight > 0 pounds & Weight <= 1000 pounds</li> </ul> </form> </div>
                 <!-- Retirement Form -->
                 <div id="retirement-form"
-                  class="transition duration-500 ease-in-out hidden w-11/12 p-12 sm:w-8/12 md:w-1/2 lg:w-5/12 bg-gray-700 rounded-3xl shadow-2xl">
+                  class="transition duration-500 ease-in-out hidden p-12 bg-gray-700 rounded-3xl shadow-2xl">
                   <h1 class="text-4xl font-bold text-gray-100 text-center mb-3">Retirement</h1>
                   <h1 class="text-md font-normal text-gray-200 text-center">Please fill in your information to calculate
                     the age your savings goal will be met</h1>
