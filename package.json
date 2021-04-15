@@ -4,7 +4,7 @@
   "description": "Simple web app that uses TDD to implement two core requirements.",
   "main": "src/app.js",
   "scripts": {
-    "test": "jest src/BMI.test.js src/Retirement.test.js && npx cypress run --headless --browser chrome",
+    "test": "jest --coverage src/BMI.test.js src/Retirement.test.js && npx cypress run --headless --browser chrome",
     "build": "webpack --config webpack.config.js --mode production",
     "build:watch": "webpack -w --config webpack.config.js --mode development",
     "start:dev": "concurrently \"npm run build:watch\" \"live-server public\"",
