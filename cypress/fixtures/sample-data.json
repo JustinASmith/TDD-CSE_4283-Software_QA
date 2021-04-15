@@ -1,0 +1,13 @@
+{
+    "bmi": {
+    "feet": "5",
+    "inches": "6",
+    "pounds": "155"
+    },
+    "retirement": {
+        "age": "25",
+        "salary": "70000",
+        "percentSaved": "20%",
+        "goal": "1000000"
+    }
+}
