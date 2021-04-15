@@ -8,7 +8,7 @@
   <a href="https://github.com/JustinASmith/TDD-CSE_4283-Software_QA/actions">
     <img alt="Firebase Continuous Deployment Passing" src="https://github.com/JustinASmith/TDD-CSE_4283-Software_QA/actions/workflows/deploy.yml/badge.svg?branch=main" />
   </a>
-  <a href='https://coveralls.io/github/JustinASmith/TDD-CSE_4283-Software_QA?branch=main'><img src='https://coveralls.io/repos/github/JustinASmith/TDD-CSE_4283-Software_QA/badge.svg?branch=main' alt='Coverage Status' /></a>
+  <a href='https://coveralls.io/github/JustinASmith/TDD-CSE_4283-Software_QA?branch=main'><img src='https://coveralls.io/repos/github/JustinASmith/TDD-CSE_4283-Software_QA/badge.svg?branch=add_coverage' alt='Coverage Status' /></a>
   <a href="https://wakatime.com/badge/github/JustinASmith/TDD-CSE_4283-Software_QA">
     <img alt="Time Tracking" src="https://wakatime.com/badge/github/JustinASmith/TDD-CSE_4283-Software_QA.svg" />
   </a>
