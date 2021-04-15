@@ -1,6 +1,6 @@
 {
   "name": "tdd-cse_4283-software_qa",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple web app that uses TDD to implement two core requirements.",
   "main": "src/app.js",
   "scripts": {

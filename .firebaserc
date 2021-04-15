@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "tdd-cse-4283-assignment"
+    "prod": "tdd-cse-4283-assignment",
+    "staging": "tdd-cse-4283-staging"
   }
 }
