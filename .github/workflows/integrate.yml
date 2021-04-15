@@ -21,3 +21,6 @@ jobs:
           args: deploy --project tdd-cse-4283-staging --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      - uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
