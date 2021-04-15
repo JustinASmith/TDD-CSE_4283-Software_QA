@@ -15,9 +15,8 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run build
-      - run: firebase use staging
       - uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting
+          args: use staging && deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
