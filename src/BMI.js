@@ -1,5 +1,5 @@
 class BMI {
-    
+
     constructor() {
         this.feet = NaN;
         this.inches = NaN;
@@ -10,7 +10,7 @@ class BMI {
 
     getBMI() {
         this.bmi = this.getValue();
-        this.category =this.getCategory();
+        this.category = this.getCategory();
         return {
             bmi: this.bmi,
             category: this.category
@@ -23,16 +23,28 @@ class BMI {
         else this.feet = NaN;
     }
 
+    getFeet() {
+        return this.feet;
+    }
+
     setInches(inches) {
         if (typeof inches != 'number') inches = this.round(inches, 0);
         if (inches >= 0 && inches <= 132) this.inches = inches;
         else this.inches = NaN;
     }
 
+    getInches() {
+        return this.inches;
+    }
+
     setPounds(pounds) {
         if (typeof pounds != 'number') pounds = this.round(pounds, 0);
         if (pounds > 0 && pounds <= 1000) this.pounds = pounds;
         else this.pounds = NaN;
+    }
+
+    getPounds() {
+        return this.pounds;
     }
 
     getValue() {
@@ -56,11 +68,11 @@ class BMI {
         if (isNaN(this.feet) || isNaN(this.inches) || isNaN(this.pounds) || isNaN(this.bmi)) {
             return undefined;
         }
-        if (this.bmi > 30.0) {
+        if (this.bmi >= 30.0) {
             return 'Obese';
-        } else if (this.bmi > 25.0) {
+        } else if (this.bmi >= 25.0) {
             return 'Overweight';
-        } else if (this.bmi > 18.5) {
+        } else if (this.bmi >= 18.5) {
             return 'Normal';
         } else {
             return 'Underweight';

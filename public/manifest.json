@@ -1,0 +1,14 @@
+{
+  "name": "Test Driven Development for CSE 4283",
+  "short_name": "TDD-CSE-4283",
+  "description": "Apply test-driven development (TDD) to implement a set of software requirements",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1F2937",
+  "icons": [{
+    "src": "terminal.png",
+    "sizes": "32x32",
+    "type": "image/png"
+  }]
+}
