@@ -1,6 +1,6 @@
 {
   "projects": {
-    "prod": "tdd-cse-4283-assignment",
+    "prod": "tdd-cse-4283-production",
     "staging": "tdd-cse-4283-staging"
   }
 }
