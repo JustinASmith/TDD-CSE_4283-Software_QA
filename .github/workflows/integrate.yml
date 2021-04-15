@@ -17,6 +17,6 @@ jobs:
       - run: npm run build
       - uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting --project tdd-cse-4283-staging-preview
+          args: deploy --only hosting --project staging
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
