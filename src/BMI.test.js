@@ -1,4 +1,6 @@
-const { BMI } = require('./BMI')
+const {
+  BMI
+} = require('./BMI')
 
 describe('Body Mass Index (BMI) class', () => {
   let bmi
@@ -151,6 +153,16 @@ describe('Body Mass Index (BMI) class', () => {
       const result = bmi.getBMI()
       expect(result.bmi).toBe(26.9)
       expect(result.category).toBe('Overweight')
+    })
+
+    // Test Normal BMI
+    test('a 6 foot, 2 inch, 170 pound person has a bmi of 22.4 which is normal', () => {
+      bmi.setFeet(6)
+      bmi.setInches(2)
+      bmi.setPounds(170)
+      const result = bmi.getBMI()
+      expect(result.bmi).toBe(22.4)
+      expect(result.category).toBe('Normal')
     })
   })
 })
